@@ -2,6 +2,18 @@
     reverse_proxy grafana:3000  
 }
 
+:3333 {
+    reverse_proxy web_python:3333
+}
+
+:3306 {
+    reverse_proxy maria:3306  
+}
+
+:5000 {
+    reverse_proxy awsapi:5000
+}
+
 :8080 {
     basicauth /* {
         {$ADMIN_USER} {$ADMIN_PASSWORD_HASH}
@@ -28,4 +40,12 @@
         {$ADMIN_USER} {$ADMIN_PASSWORD_HASH}
     }    
     reverse_proxy pushgateway:9091
+}
+
+:8081 {
+    reverse_proxy renderer:8081
+}
+
+:9115 {
+    reverse_proxy blackbox_exporter:9115
 }
