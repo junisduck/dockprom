@@ -3,13 +3,13 @@ import boto3
 APP = Flask(__name__)
 CLIENT = boto3.client(
     "sns",
-    aws_access_key_id="AKIAY5PDDSHSYXHR5FKK",
-    aws_secret_access_key="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",
-    region_name="ap-northeast-2"
+    aws_access_key_id="",
+    aws_secret_access_key="",
+    region_name=""
 )
 @APP.route('/sendsms', methods=['POST'])
 def sendsms():
-    numbers = ["8201030056900"]
+    numbers = ["82"]
     message = request.json["message"]
     print(message)
     for number in numbers:
