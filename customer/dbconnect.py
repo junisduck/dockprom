@@ -35,10 +35,10 @@ def call_php(company_name, person, phone_number, server_instance, status, time):
     type = 'disk'
     datas = {
         'id_type': 'MID',
-        'id': 'dreamcloud',
-        'auth_key': '365e0742183b71e950ca7c3dce3b41a0',
+        'id': '',
+        'auth_key': '',
         'msg_type': 'KAT',
-        'callback_key': 'aa95b42929a5dff649874c8df5b87a4d946c0669',
+        'callback_key': '',
         'send_id_receive_number': '0260076273|{}'.format(phone_number),
         'template_code': 'dream_test01',
         'content': '(드림라인 알림톡 발송)\n알림 안내\n{} {}님, 안녕하세요.\n서버 : {} {}의\n값이 {}으로 임계치를 초과한 상태 입니다.\n서버 담당자확인 후 통보 드리겠습니다.'.format(company_name, person, server_instance, type, value),

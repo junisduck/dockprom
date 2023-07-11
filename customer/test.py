@@ -31,10 +31,10 @@ def call_php(status, time):
     # server_time = 10
     datas = {
         'id_type': 'MID',
-        'id': 'dreamcloud',
-        'auth_key': '365e0742183b71e950ca7c3dce3b41a0',
+        'id': '',
+        'auth_key': '',
         'msg_type': 'KAT',
-        'callback_key': 'aa95b42929a5dff649874c8df5b87a4d946c0669',
+        'callback_key': '',
         'send_id_receive_number': '0260076273|01047249812',
         'template_code': 'dream_01',
         # 'content': '(드림라인 알림톡 발송)\n\n서버 : %s' % server_instance + '\n값 : %d' % server_value + '\n발생시간 : %d' % server_time + '\n\n감사합니다.',
