@@ -216,18 +216,20 @@ services:
     labels:
       org.label-schema.group: "monitoring"
 
-  awsapi:
-    image: python:latest
-    container_name: awsapi
-    restart: unless-stopped
-    working_dir: /sendsms
-    volumes:
-      - "./prometheus/sendsms:/sendsms"
-    command: bash -c "pip install -r requirements.txt && python sendsms.py"
-    expose:
-      - 5000
-    networks:
-      - monitor-net
+        #  awsapi:
+        #    image: python:latest
+        #    container_name: awsapi
+        #    restart: unless-stopped
+        #    working_dir: /sendsms
+        #    volumes:
+        #      - "./prometheus/sendsms:/sendsms"
+        #    command: bash -c "pip install -r requirements.txt && python sendsms.py"
+        #    expose:
+        #      - 5000
+        #    networks:
+        #      - monitor-net
+        #    labels:
+        #      org.label-schema.group: "monitoring"
 
 
   caddy:
